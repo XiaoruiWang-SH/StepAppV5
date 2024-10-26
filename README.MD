@@ -1,14 +1,19 @@
 Name: Xiaorui Wang
+
 Repo: https://github.com/XiaoruiWang-SH/StepAppV5
 
 Add a daily report entry in draw:
-![draw](Screenshot_20241026_200837.png)
+<div style="text-align:center;">
+    <img src="Screenshot_20241026_200837.png" width="400"/>
+</div>
 
 Hour report:
-![hour report](Screenshot_20241026_201344.png)
+<div style="text-align:center;">
+    <img src="Screenshot_20241026_201344.png" width="400"/>
+</div>
 
 Daily report:
-![daily report](Screenshot_20241026_200852.png)
-
-Daily report(full data):
-![daily report(simulate data)](Screenshot_20241026_200921.png)
+<div style="text-align:center;">
+    <img src="Screenshot_20241026_200852.png" width="400"/>
+    <img src="Screenshot_20241026_200921.png" width="400"/>
+</div>
