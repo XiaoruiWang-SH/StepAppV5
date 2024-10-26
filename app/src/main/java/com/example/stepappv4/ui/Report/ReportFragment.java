@@ -132,10 +132,10 @@ public class ReportFragment extends Fragment {
 
 
         // TODO 10 (YOUR TURN): Modify the UI of the cartesian
-//        cartesian.yAxis(0).title("Number of steps");
-//        cartesian.xAxis(0).title("Hour");
-//        cartesian.background().fill("#00000000");
-//        cartesian.animation(true);
+        cartesian.yAxis(0).title("Number of steps");
+        cartesian.xAxis(0).title("Hour");
+        cartesian.background().fill("#00000000");
+        cartesian.animation(true);
 
         return cartesian;
     }

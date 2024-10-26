@@ -126,6 +126,35 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
         return map;
     }
 
+    public static Map<String, Integer> loadStepsByLast7Days(Context context, List<String> dates){
+        Map<String, Integer>  map = new HashMap<>();
+
+        // 2. Get the readable database
+        StepAppOpenHelper databaseHelper = new StepAppOpenHelper(context);
+        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+
+        // 3. Define the query to get the data
+        Cursor cursor = database.rawQuery("SELECT day, COUNT(*)  FROM num_steps " +
+                "WHERE day IN (?,?,?,?,?,?,?) GROUP BY day", dates.toArray(new String[7]));
+        cursor.moveToFirst();
+        for (int index=0; index < cursor.getCount(); index++){
+            String dayStr = cursor.getString(0);
+            Integer tmpValue = Integer.parseInt(cursor.getString(1));
+
+            //2. Put the data from the database into the map
+            map.put(dayStr, tmpValue);
+
+            cursor.moveToNext();
+        }
+
+        // 5. Close the cursor and database
+        cursor.close();
+        database.close();
+
+        // 6. Return the map with hours and number of steps
+        return map;
+    }
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
