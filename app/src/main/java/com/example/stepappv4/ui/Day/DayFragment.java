@@ -91,14 +91,14 @@ public class DayFragment extends Fragment {
 
         Map<String, Integer> last7DaysSteps = StepAppOpenHelper.loadStepsByLast7Days(getContext(), last7Days);
         // test data
-        last7DaysSteps = Map.of(
-                "2024-10-26", 10,
-                "2024-10-22", 18,
-                "2024-10-24", 15,
-                "2024-10-23", 20,
-                "2024-10-25", 5,
-                "2024-10-21", 7,
-                "2024-10-20", 24);
+//        last7DaysSteps = Map.of(
+//                "2024-10-26", 10,
+//                "2024-10-22", 18,
+//                "2024-10-24", 15,
+//                "2024-10-23", 20,
+//                "2024-10-25", 5,
+//                "2024-10-21", 7,
+//                "2024-10-20", 24);
 
          LinkedHashMap<String, Integer> linkedHashMap = last7DaysSteps.entrySet()
                 .stream()
